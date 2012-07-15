@@ -1,0 +1,44 @@
+/* Theme settings page. */
+.form-table th {
+	width: 20%;
+	}
+	#custom-login-general-meta-box .form-table th {
+		width: 33%;
+	}
+	
+.upload_image {
+	float: left;
+	margin-right: 5px;
+}
+.upload_image_button {
+	height: 22px;
+	padding-top: 1px;
+}
+	.upload_image_button:hover {
+		cursor: pointer;
+	}
+	
+.metabox-holder .column-1 {
+	float: left;
+	width: 65%;
+	}
+.metabox-holder .column-2 {
+	float: right;
+	width: 33%;
+	}
+.metabox-holder .column-3 {
+	clear: both;
+	width: 100%;
+	}
+
+/* Questions */
+a.question, a.addrows {
+	font-weight: bold;
+	text-decoration: none;
+	}
+a.question:hover, a.addrows:hover {
+	cursor: pointer;
+	}
+textarea {
+	display: block;
+	}

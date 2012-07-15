@@ -1,0 +1,60 @@
+/* Twitter Wings */
+
+.tw-status {
+	margin-bottom : 20px;
+	line-height : 1.6;
+}
+
+.tw-header .tw-follow {
+	margin-bottom : 10px;
+}
+
+.tw-title {
+	margin-bottom : 10px;
+}
+
+.tw-header .widget-title {
+	margin-bottom : 5px;
+}
+
+.tw-avatar {
+	float : left;
+	margin-right : 8px;
+}
+
+.tw-text {
+	margin-bottom : 0;
+	
+}
+
+.tw-name {
+	font-size : 115%;
+	line-height : 1.1;
+	margin-bottom : 3px;
+}
+
+.tw-display-name {
+	font-size : 80%;
+}
+
+.tw-time {
+	font-size : 94%;
+	margin-bottom : 0;
+	line-height : 1.5;	
+}
+
+footer .tw-time {
+	margin-bottom : 0;
+	line-height : 1.6;
+}
+
+.tw-time a {
+	font-weight : normal;
+}
+#twitter-wings .tw-text a:link,
+#twitter-wings .tw-text a:visited,
+#twitter-wings .tw-text a:active,
+#twitter-wings .tw-text a:hover { text-decoration : none; }
+
+#twitter-wings .tw-text a:active span,
+#twitter-wings .tw-text a:hover span { text-decoration : none; }

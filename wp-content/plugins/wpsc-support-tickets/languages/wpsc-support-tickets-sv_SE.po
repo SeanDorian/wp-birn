@@ -1,0 +1,370 @@
+# Copyright (C) 2012 wpsc Support Tickets
+# This file is distributed under the same license as the wpsc Support Tickets package.
+msgid ""
+msgstr ""
+"Project-Id-Version: wpsc Support Tickets 1.6.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wpsc-support-tickets\n"
+"POT-Creation-Date: 2012-04-15 04:57:59+00:00\n"
+"PO-Revision-Date: 2012-04-14 21:59-0800\n"
+"Last-Translator: wpStoreCart, LLC <admin@wpstorecart.com>\n"
+"Language-Team: wpStoreCart, LLC <admin@wpstorecart.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+
+#: php/delete_ticket.php:15
+#: wpsc-support-tickets.php:114
+#: wpsc-support-tickets.php:252
+#: wpsc-support-tickets.php:311
+msgid "Cheatin&#8217; uh?"
+msgstr "Luring&#8217; uh?"
+
+#: php/load_ticket.php:24
+#: php/load_ticket.php:64
+#: wpsc-support-tickets.php:283
+#: wpsc-support-tickets.php:344
+#: wpsc-support-tickets.php:375
+#: wpsc-support-tickets.php:441
+#: wpsc-support-tickets.php:673
+msgid "Guest"
+msgstr "Gäst"
+
+#: php/load_ticket.php:34
+#: php/load_ticket.php:68
+#: wpsc-support-tickets.php:348
+#: wpsc-support-tickets.php:379
+msgid "Posted by"
+msgstr "Postad av"
+
+#: php/reply_ticket.php:101
+msgid "Reply to a support ticket was received."
+msgstr "En uppdatering till ett ärende har inkommit."
+
+#: php/reply_ticket.php:102
+msgid "There is a new reply on support ticket: "
+msgstr "En uppdatering till ett ärende har inkommit."
+
+#: php/submit_ticket.php:83
+msgid "A new support ticket was received."
+msgstr "Ett nytt ärende har inkommit."
+
+#: php/submit_ticket.php:84
+msgid "There is a new support ticket: "
+msgstr "Ett nytt ärende har inkommit."
+
+#: wpsc-support-tickets.php:86
+msgid "Support"
+msgstr "Support"
+
+#: wpsc-support-tickets.php:86
+msgid "Billing"
+msgstr "Fakturering"
+
+#: wpsc-support-tickets.php:88
+msgid "Your support ticket was received."
+msgstr "Ditt supportärende har registrerats."
+
+#: wpsc-support-tickets.php:89
+msgid "Thank you for opening a new support ticket.  We will look into your issue and respond as soon as possible."
+msgstr "Tack för att du öppnar ett supportärende. Vi kommer nu att behandla ditt ärende och återkoppla till dig så snart som möjlig."
+
+#: wpsc-support-tickets.php:90
+msgid "Your support ticket reply was received."
+msgstr "Uppdateringen för ditt supportärende har registrerats."
+
+#: wpsc-support-tickets.php:91
+msgid "A reply was posted to one of your support tickets."
+msgstr "En uppdatering av ditt supportärende har skickats."
+
+#: wpsc-support-tickets.php:151
+msgid "Settings Updated."
+msgstr "Inställningar uppdaterade."
+
+#: wpsc-support-tickets.php:164
+msgid "Main Page"
+msgstr "Huvudsida"
+
+#: wpsc-support-tickets.php:164
+msgid "You need to use a Page as the base for wpsc Support Tickets."
+msgstr "Du måste använda en sida som bas för wpsc Support Tickets."
+
+#: wpsc-support-tickets.php:167
+msgid "Select page"
+msgstr "Välj sida"
+
+#: wpsc-support-tickets.php:186
+msgid "Departments"
+msgstr "Avdelningar"
+
+#: wpsc-support-tickets.php:186
+msgid "Separate these values with a double pipe, like this ||"
+msgstr "Separera dessa värden med två lodräta streck ||"
+
+#: wpsc-support-tickets.php:188
+msgid "Email"
+msgstr "E-post"
+
+#: wpsc-support-tickets.php:188
+msgid "The admin email where all new ticket &amp; reply notification emails will be sent"
+msgstr "Administratörens e-postadress dit alla nya ärenden &amp; uppdateringar skickas"
+
+#: wpsc-support-tickets.php:190
+msgid "New Ticket Email"
+msgstr "Nytt Supportärende"
+
+#: wpsc-support-tickets.php:190
+msgid "The subject &amp; body of the email sent to the customer when creating a new ticket."
+msgstr "Ämnet &amp; meddelandet i e-posten som skickas till kunden när denne skapar ett nytt ärende."
+
+#: wpsc-support-tickets.php:194
+msgid "New Reply Email"
+msgstr "Ärende uppdaterat"
+
+#: wpsc-support-tickets.php:194
+msgid "The subject &amp; body of the email sent to the customer when there is a new reply."
+msgstr "Ämnet &amp; meddelandet i e-posten som skickas till kunden när denne uppdaterar ett ärende."
+
+#: wpsc-support-tickets.php:198
+msgid "Disable inline styles"
+msgstr "Avaktivera inline-stil"
+
+#: wpsc-support-tickets.php:198
+msgid "Set this to true if you want to disable the inline CSS styles."
+msgstr "Sätta detta till sant om du vill avaktivera inline CSS-stil."
+
+#: wpsc-support-tickets.php:218
+msgid "Allow Guests"
+msgstr "Tillåt gäster"
+
+#: wpsc-support-tickets.php:218
+msgid "Set this to true if you want Guests to be able to use the support ticket system."
+msgstr "Sätt detta till sant om du vill kunna låta gäster skapa supportärenden."
+
+#: wpsc-support-tickets.php:241
+msgid "More Options"
+msgstr "Fler Alternativ"
+
+#: wpsc-support-tickets.php:241
+msgid "Update Settings"
+msgstr "Uppdatera inställningar"
+
+#: wpsc-support-tickets.php:265
+msgid "Show tickets:"
+msgstr "Visa supportärende:"
+
+#: wpsc-support-tickets.php:265
+#: wpsc-support-tickets.php:406
+msgid "Open"
+msgstr "Öppen"
+
+#: wpsc-support-tickets.php:265
+#: wpsc-support-tickets.php:407
+msgid "Closed"
+msgstr "Stängd"
+
+#: wpsc-support-tickets.php:272
+msgid "View Open Tickets:"
+msgstr "Visa Olösta Supportärende:"
+
+#: wpsc-support-tickets.php:274
+msgid "View Closed Tickets:"
+msgstr "Se Stängda Supportärende:"
+
+#: wpsc-support-tickets.php:276
+#: wpsc-support-tickets.php:434
+#: wpsc-support-tickets.php:681
+msgid "Ticket"
+msgstr "Ärende"
+
+#: wpsc-support-tickets.php:276
+#: wpsc-support-tickets.php:405
+#: wpsc-support-tickets.php:434
+#: wpsc-support-tickets.php:681
+msgid "Status"
+msgstr "Status"
+
+#: wpsc-support-tickets.php:276
+msgid "User"
+msgstr "Användare"
+
+#: wpsc-support-tickets.php:276
+#: wpsc-support-tickets.php:434
+#: wpsc-support-tickets.php:681
+msgid "Last Reply"
+msgstr "Senast uppdaterad"
+
+#: wpsc-support-tickets.php:286
+#: wpsc-support-tickets.php:289
+#: wpsc-support-tickets.php:444
+#: wpsc-support-tickets.php:447
+msgid "ticket creator"
+msgstr "ärendeskapare"
+
+#: wpsc-support-tickets.php:291
+#: wpsc-support-tickets.php:449
+#: wpsc-support-tickets.php:689
+msgid "Staff Member"
+msgstr "Anställd"
+
+#: wpsc-support-tickets.php:294
+#: wpsc-support-tickets.php:453
+#: wpsc-support-tickets.php:692
+msgid "View"
+msgstr "Visa"
+
+#: wpsc-support-tickets.php:294
+#: wpsc-support-tickets.php:692
+msgid "by"
+msgstr "av"
+
+#: wpsc-support-tickets.php:379
+msgid "Are you sure you want to delete this reply?"
+msgstr "Är du säker på att du vill ta bort detta svar?"
+
+#: wpsc-support-tickets.php:379
+msgid "Delete Reply"
+msgstr "Ta bort Svara"
+
+#: wpsc-support-tickets.php:395
+#: wpsc-support-tickets.php:642
+msgid "Your message"
+msgstr "Ditt meddelande"
+
+#: wpsc-support-tickets.php:398
+#: wpsc-support-tickets.php:645
+msgid "Department"
+msgstr "Avdelning"
+
+#: wpsc-support-tickets.php:409
+msgid "Actions"
+msgstr "Funktion"
+
+#: wpsc-support-tickets.php:410
+msgid "Are you sure you want to delete this ticket?"
+msgstr "Är du säker på att du vill ta bort denna biljett?"
+
+#: wpsc-support-tickets.php:410
+msgid "Delete Ticket"
+msgstr "Ta bort supportärende"
+
+#: wpsc-support-tickets.php:412
+msgid "Are you sure you want to cancel?"
+msgstr "Är du säker på att du vill avbryta?"
+
+#: wpsc-support-tickets.php:412
+#: wpsc-support-tickets.php:651
+#: wpsc-support-tickets.php:660
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: wpsc-support-tickets.php:412
+msgid "Update Ticket"
+msgstr "Uppdatera ärende"
+
+#: wpsc-support-tickets.php:457
+msgid "No open tickets!"
+msgstr "Inga öppna ärenden!"
+
+#: wpsc-support-tickets.php:465
+msgid "wpscSupportTickets Overview"
+msgstr "wpscSupportTickets översikt"
+
+#: wpsc-support-tickets.php:575
+msgid "Enter your email address"
+msgstr "Skriv din e-postadress"
+
+#: wpsc-support-tickets.php:576
+msgid "Submit"
+msgstr "Skicka"
+
+#: wpsc-support-tickets.php:624
+#: wpsc-support-tickets.php:657
+msgid "Loading"
+msgstr "Laddar"
+
+#: wpsc-support-tickets.php:638
+#: wpsc-support-tickets.php:640
+msgid "Create a New Ticket"
+msgstr "Skapa nytt supportärende"
+
+#: wpsc-support-tickets.php:641
+msgid "Title"
+msgstr "Titel"
+
+#: wpsc-support-tickets.php:651
+msgid "Submit Ticket"
+msgstr "Skicka ärende"
+
+#: wpsc-support-tickets.php:659
+msgid "Your reply"
+msgstr "Ditt svar"
+
+#: wpsc-support-tickets.php:660
+msgid "Submit Reply"
+msgstr "Skicka svar"
+
+#: wpsc-support-tickets.php:680
+msgid "View Previous Tickets:"
+msgstr "Visa tidigare ärenden:"
+
+#: wpsc-support-tickets.php:684
+#: wpsc-support-tickets.php:687
+msgid "you"
+msgstr "du"
+
+#: wpsc-support-tickets.php:701
+msgid "Please"
+msgstr "Var vänlig"
+
+#: wpsc-support-tickets.php:701
+msgid "log in"
+msgstr "logga in"
+
+#: wpsc-support-tickets.php:701
+msgid "or"
+msgstr "eller"
+
+#: wpsc-support-tickets.php:701
+msgid "register"
+msgstr "registrera"
+
+#. #-#-#-#-#  plugin.pot (wpsc Support Tickets 1.7.4)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: wpsc-support-tickets.php:746
+msgid "wpsc Support Tickets"
+msgstr "wpsc Support Tickets"
+
+#: wpsc-support-tickets.php:746
+msgid "Support Tickets"
+msgstr "Supportärende"
+
+#: wpsc-support-tickets.php:747
+msgid "Reply to Support Ticket"
+msgstr "Svara på supportärende"
+
+#: wpsc-support-tickets.php:747
+msgid "Reply to Support Tickets"
+msgstr "Svara på supportärende"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wpstorecart.com/wpsc-support-tickets/"
+msgstr "http://wpstorecart.com/wpsc-support-tickets/"
+
+#. Description of the plugin/theme
+msgid "An open source help desk and support ticket system for Wordpress using jQuery. Easy to use for both users & admins."
+msgstr "En öppen källkod help desk och support biljettsystem för Wordpress med jQuery. Enkelt att använda för både användare och administratörer."
+
+#. Author of the plugin/theme
+msgid "wpStoreCart, LLC"
+msgstr "wpStoreCart, LLC"
+
+#. Author URI of the plugin/theme
+msgid "URI: http://wpstorecart.com/"
+msgstr "URI: http://wpstorecart.com/"
+
+#~ msgid "false"
+#~ msgstr "falskt"
