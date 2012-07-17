@@ -10,8 +10,8 @@ if($action == 'add') {
 		array(
 			'Title' => $eInfo[0],
 			'Venue' => $eInfo[1],
-			'Date_Formatted' => $eInfo[5],
-			'Date' => $eInfo[2],
+			'Date_Formatted' => $eInfo[2],
+			'Date' => $eInfo[5],
 			'Call_Time' => $eInfo[3],
 			'Content' => $eInfo[4],
 			'Complete' => 0,
@@ -36,7 +36,7 @@ if($action == 'add') {
 		);
 	foreach ($eventInfo as $ei) {
 		$subject = 'New Production Opportunity: '.$ei->Date_Formatted.' ('.$ei->Venue.', '.$ei->Title.')';
-		$message = 'If you would like to participate in one of our '.$ei->Venue.' events, please visit the production page (http://www.thebirn.com/cp/production) on the CP to apply.'."\n\n";
+		$message = 'If you would like to participate in one of our '.$ei->Venue.' events, please visit the production page (http://www.thebirn.com/cp/production/?eventid='.$ei->ID.') on the CP to apply.'."\n\n";
 		$message .= 'Here are the positions we need to have filled:'."\n";
 		$message .= ($ei->Producer == 'true' ? 'Producer'."\n" : '');
 		$message .= ($ei->Engineer == 'true' ? 'Engineer'."\n" : '');
@@ -62,7 +62,7 @@ if($action == 'add') {
 			$subscribed = $user_data->_email;
 			mail($subscribed,$subject,$message,$headers);
 		}
-	//	mail('production@thebirn.com',$subject,$message,$headers);
+		mail('production@thebirn.com',$subject,$message,$headers);
 	}
 }
 if($action == 'Subscribe') {

@@ -81,7 +81,13 @@ button {
 	}
 	?>
 	<div id="content">
-		<?php include ('functions/events.php') ?>
+		<?php
+		if ($_GET['eventid']) {
+			include ('functions/events-details.php');	
+		} else {
+			include ('functions/events.php');	
+		}
+		?>		
 	</div>
 </div>
 <?php 

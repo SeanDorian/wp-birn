@@ -1,0 +1,1 @@
+{"mysqldump":{"e9fff8c9ca08a425fee730a26bb68849":"mysqldump: Got error: 2002: Can't connect to local MySQL server through socket '\/tmp\/mysql.sock' (2) when trying to connect\n"}}

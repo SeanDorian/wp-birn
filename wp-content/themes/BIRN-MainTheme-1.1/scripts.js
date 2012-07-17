@@ -92,8 +92,7 @@ function tin(action, id) {
 	}
 }
 function toggleShows(x) {
-//This function toggles between active and inactive shows on the shows page in the CP. This function should be removed and the shows.php file should merge
-//With the CP-Shows.php file.
+//This function toggles between active and inactive shows on the shows page in the CP. 
 	jQuery.ajax({
 		type: 'POST',
 		url: filepath + 'shows.php',
@@ -435,15 +434,119 @@ function production(action, id, etc) {
 				type: 'POST',
 				url: filepath + 'events-details.php',
 				data: {action: action, eventID: id},
-				success: function(data) { jQuery('#content').html(data) }
+				success: function(data) { jQuery('#content').html(data).animate({opacity: 1}, 500) }
 			})
-		}).animate({opacity: 1}, 500)
+		})
 	}
 }
-function flashApply() {
-	jQuery('#event-apply').animate({backgroundColor:'yellow'},1000)
-	.animate({backgroundColor:'#eee'},1000,function() { flashApply() })
+function eventOptions(action, id, recruit) {
+	if (action == "Go Back") {
+		jQuery('#content').animate({opacity: 0}, 500, function(){
+			jQuery.ajax({
+				type: 'POST',
+				url: filepath + 'events.php',
+				success: function(data) { jQuery('#content').html(data).animate({opacity: 1}, 500) }
+			})
+		})
+	} else if (action == "cancel" || action == "resume") {
+		if(confirm('Are you sure you want to '+action+' this event?')) {
+			jQuery('#content').animate({opacity: 0}, 500, function(){
+				jQuery.ajax({
+					type: 'POST',
+					url: filepath + 'events-details.php',
+					data: {action: action, eventID: id},
+					success: function(data) { jQuery('#content').html(data).animate({opacity: 1}, 500) }
+				})
+			})
+		}
+	} else if (action == 'edit' || action == 'cancel edit' || action == 'recruit') {
+		jQuery('#content').animate({opacity: 0}, 500, function(){
+			jQuery.ajax({
+				type: 'POST',
+				url: filepath + 'events-details.php',
+				data: {action: action, eventID: id},
+				success: function(data) { jQuery('#content').html(data).animate({opacity: 1}, 500) }
+			})
+		})
+	} else if (action == 'save edit') {
+		var bigchange = jQuery('#big-change').attr('value');
+		var eName = jQuery('#event-name-edit').attr('value');
+		var eType = jQuery('#event-type-edit').attr('value');
+		var eDate = jQuery('#event-date-edit').attr('value');
+		var eDateF = jQuery('#event-date-f-edit').attr('value');
+		var eCall = jQuery('#event-call-edit').attr('value');
+		var eDesc = jQuery('#event-desc-edit').attr('value');
+		var ePositions = [
+			jQuery('#event-producer-edit').attr('checked'),
+			jQuery('#event-engineer-edit').attr('checked'),
+			jQuery('#event-assistant-edit').attr('checked'),
+			jQuery('#event-photographer-edit').attr('checked'),
+			jQuery('#event-videographer-edit').attr('checked'),
+			jQuery('#event-dj-edit').attr('checked'),
+			jQuery('#event-interviewer-edit').attr('checked'),
+			jQuery('#event-reviewer-edit').attr('checked'),
+			jQuery('#event-observer-edit').attr('checked')
+		];
+		jQuery.ajax({
+			type: 'POST',
+			url: filepath+'events-details.php',
+			data: {eName: eName, type: eType, date: eDate, call: eCall, desc: eDesc, positions: ePositions, action: action, date_formatted: eDateF, eventID: id, bigchange: bigchange},
+			success: function(data) {
+				jQuery('#content').animate({opacity: 0}, 500, function() {
+					jQuery('#content').html(data).animate({opacity: 1}, 500)
+				})
+			}
+		});		
+	} else if (action == 'apply') {
+		var ePositions = [
+			jQuery('#producer').attr('checked'),
+			jQuery('#engineer').attr('checked'),
+			jQuery('#assistant').attr('checked'),
+			jQuery('#photographer').attr('checked'),
+			jQuery('#videographer').attr('checked'),
+			jQuery('#dj-top').attr('checked'),
+			jQuery('#dj-interview').attr('checked'),
+			jQuery('#dj-review').attr('checked'),
+			jQuery('#observers').attr('checked')
+		];
+		jQuery.ajax({
+			type: 'POST',
+			url: filepath+'events-details.php',
+			data: {positions: ePositions, action: action, eventID: id},
+			success: function(data) {
+				jQuery('#content').animate({opacity: 0}, 500, function() {
+					jQuery('#content').html(data).animate({opacity: 1}, 500)
+				})
+			}
+		});
+	} else if (action == 'start recruit') {
+		var recruitList = [];
+		var notRecruitList = [];
+		jQuery('#events-recruit input').each(function(){
+			if(jQuery(this).attr('checked')) {
+				var thisPos = jQuery(this).attr('class');
+				var thisID = jQuery(this).attr('title')
+				recruitList.push({label: thisPos, id: thisID});
+			} else {
+				var thisPos = jQuery(this).attr('class');
+				var thisID = jQuery(this).attr('title')
+				notRecruitList.push({label: thisPos, id: thisID});
+			}
+		})
+		jQuery.ajax({
+			type: 'POST',
+			url: filepath+'events-details.php',
+			data: {action: action, eventID: id, recruit: recruitList, notRecruit: notRecruitList},
+			success: function(data) {
+				alert('An email has been sent to those who have been recruited.')
+				jQuery('#content').animate({opacity: 0}, 500, function() {
+					jQuery('#content').html(data).animate({opacity: 1}, 500)
+				})
+			}
+		});
+	}
 }
+function bigchange() {$('#big-change').attr('value','true')}
 jQuery(document).ready(function() {
 	if(jQuery("#featured")) {
 		jQuery("#featured").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true).hover(  
@@ -457,8 +560,8 @@ jQuery(document).ready(function() {
 	jQuery('#show-title').blur(function() {	jQuery('#show-djs').text('') })
 	jQuery('#show-tabs, #edit-show-tabs').tabs()
 	jQuery('#event-date').datepicker({
-		dateFormat: 'yy/mm/dd (DD)', //Formats the date so that it sorts properly
+		dateFormat: 'DD, MM dd, yy', //Makes the date look nice
 		altField: '#event-date-f', 
-		altFormat: "DD, MM dd, yy" //Makes the date look nice
+		altFormat: "yy/mm/dd (DD)" //Formats the date so that it sorts properly
 	})
 });
