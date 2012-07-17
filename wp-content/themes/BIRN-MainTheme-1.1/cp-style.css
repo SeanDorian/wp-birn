@@ -542,7 +542,7 @@ input[type=text].medium {
 ----------------------------------------------- */
 /* =Production
 ----------------------------------------------- */
-#new-production {
+#new-production, #edit-production {
 	width: 500px;
 	position: relative;
 	margin: 0 auto 20px auto;
@@ -561,10 +561,11 @@ input[type=text].medium {
 	font-weight: bold;
 }
 #event-options {
-	float: right;
-	position: absolute;
+	width: 100%;
+	clear: both;
 	bottom: 5px;
 	right: 5px;
+	text-align: right;
 }
 #event-options button:hover {
 	background: #fff;
@@ -575,10 +576,22 @@ input[type=text].medium {
 	text-align: left;
 	clear: both;
 }
-#event-details {
+#event-details, #events-recruit {
 	width: 70%;
 	position: relative;
 	margin: 0 auto 20px auto;
+}
+.posList span {
+	display: block;
+	font-size: 1.3em;
+	font-style: italic;
+}
+.event-recruit-item {
+	border: 2px solid white;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 0 3px 0 3px;
+	margin-right: 3px;
 }
 /* =Members
 ----------------------------------------------- */
